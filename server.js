@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // this refers to the public folder
 app.use(express.static('public'));
-// HTML ROUTES ==============================================
+// HTML ROUTES 
 app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, './public/index.html'))
 );
@@ -18,14 +18,14 @@ app.get('/', (req, res) =>
 app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, './public/notes.html'))
 );
-// HTML ROUTES ==============================================
+// HTML ROUTES
 
-// API ROUTES ===============================================
+// API ROUTES 
 app.get('/api/notes', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-// GET Route for a specific tip
+// GET Route for a specific id
 app.get('/:id', (req, res) => {
     const id = req.params.id;
     readFromFile('./db/db.json')
@@ -34,11 +34,11 @@ app.get('/:id', (req, res) => {
             const result = json.filter((note) => note.id === id);
             return result.length > 0
                 ? res.json(result)
-                : res.json('No tip with that ID');
+                : res.json('No note with that ID');
         });
 });
 
-// DELETE Route for a specific tip
+// DELETE Route for a specific note
 // when defining your route path, ":id" is a variable that we will pass 
 app.delete('/api/notes/:id', (req, res) => {
     //this is the id we want to delete
@@ -60,7 +60,7 @@ app.delete('/api/notes/:id', (req, res) => {
         });
 });
 
-// POST Route for a new UX/UI tip
+// POST Route for a new UX/UI  note
 app.post('/api/notes', (req, res) => {
     console.log(req.body);
 
@@ -74,12 +74,12 @@ app.post('/api/notes', (req, res) => {
         };
 
         readAndAppend(newNote, './db/db.json');
-        res.json(`Tip added successfully 🚀`);
+        res.json(`Note added successfully 🚀`);
     } else {
-        res.error('Error in adding tip');
+        res.error('Error in adding note');
     }
 });
-// API ROUTES ===============================================
+// API ROUTES 
 app.listen(PORT, () =>
     console.log(`Express server listening on port http://localhost:${PORT}🚀`)
 );
