@@ -24,11 +24,12 @@ This project is for everyone who is interested in using an app to add/save/delet
 
 The main reason of this app is to guide the user to use and save notes on an app, the user will have to open the command line and open the `server.js` using `node server.js` and there will a displayed `http://localhost:3001` which once it is open in a browser it will present a note app page with a button named `get started` and the user will be landed to another page to create a title  and text  in order to create a note and the saved notes will be shown in a list on the left of the page, once the user does not need them he can delete them by clicking the trash can.
 
+![Sample of the title and text input ](./images%20for%20readme%20file/Screenshot-3.jpg)
+
 ![screenshot of the app](./images%20for%20readme%20file/Screenshot.jpg)
 
 ![Sample of the title and text input ](./images%20for%20readme%20file/Screenshot-2.jpg)
 
-![Sample of the title and text input ](./images%20for%20readme%20file/Screenshot-3.jpg)
 
 ![Sample of the command line ](./images%20for%20readme%20file/command-line.jpg)
 
