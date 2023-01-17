@@ -4,7 +4,7 @@ const { readFromFile, writeToFile, readAndAppend } = require('./helpers/fsUtils'
 const { v4: uuidv4 } = require('uuid');
 const path = require('path');
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 //middleware that allows the server to understand the data we send from the front end
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
