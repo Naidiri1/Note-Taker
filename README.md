@@ -34,7 +34,7 @@ The main reason of this app is to guide the user to use and save notes on an app
 ![Sample of the command line ](./images%20for%20readme%20file/command-line.jpg)
 
 
-- [Sample of the app deployed in GitHub]()
+- [Note taker deployed app in Heroku link](https://note-taker-app-iridian.herokuapp.com/)
 
 ## Credits 
 
